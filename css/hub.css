@@ -1,14 +1,12 @@
 .main {
     width: 99vw;
     height: 99vh;
-    background-color: #444444;
 }
 .main ul{
     padding: 0px;
     margin: 0px;
     position: relative;
     list-style-type: none;
-    background-color: #444444;
 }
 .ctner {
     width: 10%;
@@ -22,14 +20,12 @@
     height: 97%;
     left: 50%;
     border: 2px solid white;
-    background-color: #444444;
 }
 .main ul li{
     margin: 15px;
     padding: 0px 0px;
     position: relative;
     z-index: 1;
-    background-color: #444444;
 
 }
 .blob {
@@ -64,5 +60,7 @@
     margin-left: -40vw;
 }
 body {
-    background-color: #444444;
+    background-image: url("https://i.imgur.com/fOm8qyW.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
