@@ -32,8 +32,6 @@ def update():
         for k in todo.keys():
             l[k] = os.path.getmtime(k)
         f.write(json.dumps(l))
-    if len(todo) == 0:
-        print("UPDATED NOTHING")
     for k, v in todo.items():
         with open(k.replace("LOGS", "LOGS/COMPILED").replace(".md", ".html"), "w") as f:
             stylish = """
@@ -41,11 +39,11 @@ def update():
 <style>
     body {
         font-family: monospace;
-        text-align: center;
         font-size: 200%;
     }
     .main {
-        overflow: scroll;
+        overflow-x: auto;
+        overflow-y: auto;
         width: 100%;
         height: 100%;
     }
@@ -72,3 +70,7 @@ if __name__ == "__main__":
         new()
     elif sys.argv[1] == "u":
         update()
+    elif sys.argv[1] == "r":
+        while True:
+            update()
+            time.sleep(5)

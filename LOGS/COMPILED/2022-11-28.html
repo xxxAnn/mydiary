@@ -1,19 +1,21 @@
 <div class='main'><h1>2022-11-28</h1>
 <p>Hi, this is the first post.<br />
 Today I basically just made this website (also some math assigments).<br />
-I feel like making this site took some pretty creatives step so i'll talk about them here.</p>
-<h1>!python</h1>
-<h1>print("Hello world")</h1></div>
+I feel like making this site took some pretty creatives step so i'll talk about them here.<br />
+So at first I wanted to do a kind of pie menu where you could select any blog post from a circle.<br />
+Kinda like this <br><img alt="Pie menu" src="https://i.imgur.com/0IDNigA.png" />.<br />
+There are a few problem with this. First if you have a lot of blog posts it'll overflow. Well... <em>technically</em>, it wont overflow, there'll just be so many tiny circles it'll be basically impossible to select anything. Another problem is that it's kind of painful to make. It's not that difficult <em>per se</em>, it's just that it requires a lot of JavaScript calculations (&amp; trig) to calculate positions for each of the nodes. So yeah... I decided I won't do that. (im bad at js lmao) So next I actually tried make something ressembling a zettelkasten graph. Now if you don't know what that is I'll explain it a bit <a href="#zettelkasten">later</a> cause it's kind of interesting. Anyway for now what I tried to do was basically nodes, connected one below (or next) to the other. At that point in time I kinda new I wanted a kinda of simplistic layout, at risk of it not being extremely aesthetically pleasing. I feel like that's more interesting and represents me better. So I tried doing that. Uhm... How do I put this... It's incredibly difficult. You see there's this thing called an SVG. It's basically an image (if you're a web designer pretend you didn't read that). I thought I could use it </p>
+<h2>zettelkasten</h2></div>
 
 <link rel='stylesheet' href='styles.css'>
 <style>
     body {
         font-family: monospace;
-        text-align: center;
         font-size: 200%;
     }
     .main {
-        overflow: scroll;
+        overflow-x: auto;
+        overflow-y: auto;
         width: 100%;
         height: 100%;
     }
