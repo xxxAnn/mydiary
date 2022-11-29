@@ -36,7 +36,22 @@ def update():
         print("UPDATED NOTHING")
     for k, v in todo.items():
         with open(k.replace("LOGS", "LOGS/COMPILED").replace(".md", ".html"), "w") as f:
-            f.write(v)
+            stylish = """
+<link rel='stylesheet' href='styles.css'>
+<style>
+    body {
+        font-family: monospace;
+        text-align: center;
+        font-size: 200%;
+    }
+    .main {
+        overflow: scroll;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+            """
+            f.write(f"<div class='main'>{v}</div>\n{stylish}")
         with open(k.replace("LOGS", "LOGS/INSERT").replace(".md", ".js"), "w") as f:
             p_t = k.replace('LOGS/', "").replace(".md", "")
             p_v = k.replace("LOGS", "LOGS/COMPILED").replace(".md", ".html")
