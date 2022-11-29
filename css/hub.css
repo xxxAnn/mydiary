@@ -1,35 +1,68 @@
 .main {
-    width: 10vw;
-    height: 3vh;
-    margin-left: 45vw;
+    width: 99vw;
+    height: 99vh;
+    background-color: #444444;
 }
 .main ul{
     padding: 0px;
     margin: 0px;
     position: relative;
     list-style-type: none;
+    background-color: #444444;
+}
+.ctner {
+    width: 10%;
+    margin-left: 45%;
 }
 .main ul::before{
     content: "";
     position: absolute;
     top: 0px;
     bottom: 0px;
-    height: 80%;
+    height: 97%;
     left: 50%;
-    border: 2px solid black;
+    border: 2px solid white;
+    background-color: #444444;
 }
 .main ul li{
     margin: 15px;
     padding: 0px 0px;
     position: relative;
     z-index: 1;
-    background-color: white;
+    background-color: #444444;
+
 }
 .blob {
-    border: solid black;
+    border: solid 2px white;
+    display: flex;
     border-radius: 12px;
-    background-color: beige;
+    background-color: rgb(168, 164, 164);
     width: 100%;
-    height: 100%;
-    text-align: center;
+    height: 6%;
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition-duration: 300ms;
+}
+.partial-blob {
+    border: solid 2px white;
+    display: flex;
+    border-radius: 12px;
+    background-color: rgb(168, 164, 164);
+    width: 20%;
+    height: 6%;
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.line {
+    z-index: -1;
+}
+.blob:hover {
+    width: 90vw;
+    height: 90vh;
+    margin-left: -40vw;
+}
+body {
+    background-color: #444444;
 }
