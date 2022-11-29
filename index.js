@@ -20,6 +20,16 @@ function getVCenter(rect) {
     return (rect.top + rect.bottom)/2
 }
 
+var LOGS = {}
+
 document.body.onload = function(event) {
-    connect(document.getElementById("d1"), document.getElementById("d2"), 0)
+    t = document.getElementById("thething")
+    t.innerHTML = ""
+    Object.keys(LOGS).forEach(x => t.innerHTML += `
+        <li><div class="blob" id="${x}" onmouseenter="
+            document.getElementById('${x}').innerHTML = \`${LOGS[x]}\`
+        " onmouseleave="
+            document.getElementById('${x}').innerHTML = '${x}'
+        ">${x}</div></li>
+    `)
 }
