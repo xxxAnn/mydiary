@@ -28,7 +28,7 @@ def update():
                 print(f"UPDATED {k}")
                 with open(k, "r") as ff:
                     th_txt = ff.read()
-                todo[k] = markdown.markdown(th_txt, extensions=['nl2br'])
+                todo[k] = markdown.markdown(th_txt, extensions=['nl2br', 'fenced_code'])
         for k in todo.keys():
             l[k] = os.path.getmtime(k)
         f.write(json.dumps(l))
