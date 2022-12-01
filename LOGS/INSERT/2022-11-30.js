@@ -1,0 +1,1 @@
+LOGS["2022-11-30"] = `<embed type='text/html' src='LOGS/COMPILED/2022-11-30.html' width='100%' height='100%'>`
